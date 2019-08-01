@@ -25,10 +25,10 @@ self.addEventListener('push', function(event) {
   console.log('[Service Worker] Push Received.');
   console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
 
-  const title = 'Push Codelab';
+  const title = 'DXC System Partners';
   const options = {
-    body: 'Yay it works.',
-    icon: 'images/icon.png',
+    body: 'Greeting from System Partners.',
+    icon: 'images/dorjee.png',
     badge: 'images/badge.png'
   };
 
@@ -41,6 +41,6 @@ self.addEventListener('notificationclick', function(event) {
   event.notification.close();
 
   event.waitUntil(
-    clients.openWindow('https://developers.google.com/web/')
+    clients.openWindow('https://systempartners.com/meet-the-team')
   );
 });
